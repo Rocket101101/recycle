@@ -1,0 +1,24 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!--  调用图片选择和相机 http://www.showtimepc.com/images/C/Microsoft.jpg -->
+  <button type="default" bindtap="chooseImg"><image style="background-color: #FFFFFF" mode="widthFix" src="{{src}}" ></image></button>
+
+  <!--图片上传后预览、保存、识别-->
+  <!--view><image src='{{img_1}}' bindtap='preview_img'></image></view-->
+
+  <view style="height:20px"></view>
+
+  <view>
+  <span class="loading-text">{{motto}}</span>
+  </view>
+
+  <view>
+    <!-- 图片缩略图  -->
+    <image class="q-image" src="{{img_1}}" mode="aspectFill" bindtap="preview_img"></image>
+    <!-- 移除图片的按钮  -->
+    <!--view class="q-image-remover" bindtap="removeImage">Remove</view-->
+  </view>
+
+
+</view>
