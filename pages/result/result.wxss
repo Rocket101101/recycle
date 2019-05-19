@@ -1,0 +1,28 @@
+/* pages/result/result.wxss */
+
+.bc_green {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100rpx;
+  width: 200rpx;
+  background-color: #5FB404;
+}
+
+.recycle {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  background-color:#2E9AFE;
+}
+
+
+.FourPic {
+ /* position:absolute; */
+ display:flex;
+ width: 100%;
+ justify-content: center;  
+ align-items: center;
+}
+

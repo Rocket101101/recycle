@@ -5,8 +5,8 @@
     font-family: Consolas, Monaco, monospace;
     display: inline-block;
     color: #aaa;
-    width: 21ch;
-    animation: loading-text-typing 5s steps(21) infinite,
+    width: 18ch;
+    animation: loading-text-typing 5s steps(14) infinite,
                loading-text-caret 1s steps(1) infinite;
     white-space: nowrap;
     overflow: hidden;

@@ -1,3 +1,17 @@
 <!--pages/photo/takephoto.wxml-->
+<view class="container">
 
     <text>pages/photo/takephoto.wxml</text>
+
+  <!--  点击按钮上传图片或选择相机 http://www.showtimepc.com/images/C/Microsoft.jpg -->
+  <button type="default" bindtap="chooseImg"><image style="background-color: #FFFFFF" mode="widthFix" src="{{foursrc}}"></image></button>
+
+  <!-- 图片预览-->
+  <view>
+    <image src="{{img_1}}" mode="aspectFill" bindtap="preview_img"></image>
+  </view>
+
+  <!-- 点击确认上传-->
+<button class="submitphoto" type="primary" bindtap="submitphoto">Submit</button>
+
+</view>
