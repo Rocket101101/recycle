@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-const uploadFileUrl = 'https://win12r2.eastus.cloudapp.azure.com/upload/'
+const uploadFileUrl = 'http://win12r2.eastus.cloudapp.azure.com:8000/upload1/'
 
 Page({
   data: {
@@ -37,8 +37,17 @@ Page({
         'user': 'test'
       },
       success: function (res) {
+        wx.showLoading({
+          title: 'Loading...',
+        })
         console.log('imageSrc is:', that.data.imageSrc)
         console.log('uploadImage success, res is:', res)
+        wx.hideLoading()
+        wx.showModal({
+          content: res.data,
+          showCancel: false,
+          confirmText: "确定"
+        })
         },
       fail: function ({ errMsg }) {
         console.log('uploadImage fail, errMsg is', errMsg)
