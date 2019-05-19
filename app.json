@@ -2,12 +2,14 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/photo/takephoto"
+    "pages/photo/takephoto",
+    "pages/result/result"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "RECYCLE101",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

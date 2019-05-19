@@ -1,24 +1,34 @@
 <!--index.wxml-->
 <view class="container">
+  <view class="page-body">
+    <view class="page-section">
 
-  <!--  调用图片选择和相机 http://www.showtimepc.com/images/C/Microsoft.jpg -->
-  <button type="default" bindtap="chooseImg"><image style="background-color: #FFFFFF" mode="widthFix" src="{{src}}" ></image></button>
+     <!--没上传图片的时候隐藏预览和上传/重置按钮-->
+      <view class="page-body-info">
+        <block wx:if="{{imageSrc}}">
+            <button type="default"><image style="background-color: #FFFFFF" mode="widthFix" src="{{imageSrc}}"></image></button>
+             <view style="height:20px"></view>
+             <view class="body-view">
+             <button type="primary" bindtap="Upload">Confirm Upload</button>
+             </view>
+             <!--<view class="body-view">-->
+             <button size="mini" type="default" bindtap="reload">Reload</button>
+              <!--</view>-->
+        </block>
 
-  <!--图片上传后预览、保存、识别-->
-  <!--view><image src='{{img_1}}' bindtap='preview_img'></image></view-->
+    <!--没上传图片的时候的默认界面&点击上传图片-->
+        <block wx:else>
+          <button type="default" bindtap="chooseImg"><image style="background-color: #FFFFFF" mode="widthFix" src="{{src}}"></image></button>
+          <view style="height:20px"></view>
+          <view style='display:flex;justify-content:center;'><span class="loading-text">{{motto}}</span></view>
+        </block>
+
+      </view>
+    </view>
+  </view>
 
   <view style="height:20px"></view>
 
-  <view>
-  <span class="loading-text">{{motto}}</span>
-  </view>
-
-  <view>
-    <!-- 图片缩略图  -->
-    <image class="q-image" src="{{img_1}}" mode="aspectFill" bindtap="preview_img"></image>
-    <!-- 移除图片的按钮  -->
-    <!--view class="q-image-remover" bindtap="removeImage">Remove</view-->
-  </view>
-
+  <!--<button type="primary" bindtap='jumpBtn'>Check Result</button>-->
 
 </view>

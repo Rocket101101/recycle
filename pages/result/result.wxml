@@ -1,0 +1,16 @@
+<!--pages/result/result.wxml-->
+
+<view style="height:120px"></view>
+
+<!-- <view style="height:150px;flex-direction:column;">
+  <view>{{showResult}}</view>
+</view> -->
+
+<view class='recycle'>可回收物</view>
+
+<view style="height:40px"></view>
+
+<view class='FourPic'>
+  <image src="https://graph.baidu.com/resource/102527c6d1697ce2b230201555165387.jpg" mode="aspectFill"></image>
+</view>
+
