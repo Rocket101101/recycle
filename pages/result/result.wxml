@@ -6,7 +6,7 @@
   <view>{{showResult}}</view>
 </view> -->
 
-<view class='recycle'>可回收物</view>
+<view class='recycle'>{{wastetype}}</view>
 
 <view style="height:40px"></view>
 

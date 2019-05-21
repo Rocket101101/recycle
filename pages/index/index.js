@@ -37,18 +37,21 @@ Page({
         'user': 'test'
       },
       success: function (res) {
-        wx.showLoading({
-          title: 'Loading...',
-        })
         console.log('imageSrc is:', that.data.imageSrc)
         console.log('uploadImage success, res is:', res)
-        wx.hideLoading()
-        wx.showModal({
-          content: res.data,
-          showCancel: false,
-          confirmText: "确定"
+        console.log(res.data);
+        //wx.showModal({
+        //  content: res.data,
+        //  showCancel: false,
+        //  confirmText: "确定"
+       // })
+        app.globalData.tp = res.data;
+        console.log(app.globalData.tp);
+
+        wx.navigateTo({
+          url: '../result/result?tp=' + app.globalData.tp
         })
-        },
+      },
       fail: function ({ errMsg }) {
         console.log('uploadImage fail, errMsg is', errMsg)
       }        
