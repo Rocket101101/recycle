@@ -1,12 +1,16 @@
 // pages/result/result.js
+//获取应用实例
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    wastetype: '',
     showResult:'',
-    ResultList:[
+      ResultList:[
       {result:'厨余垃圾'},
       {result:'可回收物'},
       {result:'其他垃圾'},
@@ -18,6 +22,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      wastetype: app.globalData.tp
+    })
 
   },
 

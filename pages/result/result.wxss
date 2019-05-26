@@ -10,7 +10,28 @@
   background-color: #5FB404;
 }
 
-.recycle {
+.wet {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  background-color:#01B468;
+}
+
+.dry {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  background-color:#FFDC35;
+}
+
+.hazardous {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  background-color:#AE0000;
+}
+
+.recyclable {
   font-size: 50px;
   display: flex;
   justify-content: center;

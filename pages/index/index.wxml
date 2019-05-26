@@ -11,9 +11,9 @@
              <view class="body-view">
              <button type="primary" bindtap="Upload">Confirm Upload</button>
              </view>
-             <!--<view class="body-view">-->
-             <button size="mini" type="default" bindtap="reload">Reload</button>
-              <!--</view>-->
+             <view class="body-view">
+             <button type="default" bindtap="reload">Reload</button>
+              </view>
         </block>
 
     <!--没上传图片的时候的默认界面&点击上传图片-->
