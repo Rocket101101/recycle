@@ -6,11 +6,24 @@
   <view>{{showResult}}</view>
 </view> -->
 
-<view class='recycle'>{{wastetype}}</view>
+<view wx:if="{{wastetype=='Recycleable'}}"> 
+<view class='recyclable'><text>Recyclable</text></view>
+</view>
 
-<view style="height:40px"></view>
+<view wx:elif="{{wastetype=='Wet Waste'}}"> 
+<view class='wet'>{{wastetype}}</view>
+</view>
+
+<view wx:elif="{{wastetype=='Dry Waste'}}"> 
+<view class='dry'>{{wastetype}}</view>
+</view>
+
+<view wx:elif="{{wastetype=='Hazardous'}}"> 
+<view class='hazardous'>{{wastetype}}</view>
+</view>
+
+<view style="height:80px"></view>
 
 <view class='FourPic'>
   <image src="https://graph.baidu.com/resource/102527c6d1697ce2b230201555165387.jpg" mode="aspectFill"></image>
 </view>
-

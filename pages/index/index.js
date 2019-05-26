@@ -7,6 +7,7 @@ Page({
   data: {
     motto: 'Click to start...',
     imgsrc: null,
+    //showloading: false,
     src: 'https://previews.123rf.com/images/chudtsankov/chudtsankov1607/chudtsankov160700270/61548263-smiling-green-recycle-bin-cartoon-mascot-character-holding-a-recycle-sign.jpg'
   },
 
@@ -28,6 +29,11 @@ Page({
   
   //上传图片
   Upload: function (e) {  // 绑定的upload button
+    //loading
+    wx.showLoading({
+      title: 'Loading',
+    })
+
     var that = this
     wx.uploadFile({  // 上传图片
       url: uploadFileUrl,
@@ -36,7 +42,9 @@ Page({
       formData: {
         'user': 'test'
       },
+
       success: function (res) {
+        wx.hideLoading()
         console.log('imageSrc is:', that.data.imageSrc)
         console.log('uploadImage success, res is:', res)
         console.log(res.data);
@@ -46,19 +54,21 @@ Page({
         //  confirmText: "确定"
        // })
         app.globalData.tp = res.data;
-        console.log(app.globalData.tp);
+        console.log('server result: ' + app.globalData.tp);
 
         wx.navigateTo({
           url: '../result/result?tp=' + app.globalData.tp
         })
       },
       fail: function ({ errMsg }) {
+        wx.hideLoading()
         console.log('uploadImage fail, errMsg is', errMsg)
       }        
     })
   },
 
   reload: function (e) {  // 绑定的reload button
+    wx.hideLoading()
     this.setData({
       imageSrc: null
     })
